@@ -31,11 +31,11 @@ if __name__ == '__main__':
         menu()
         user_input = input('Please enter an option: ')
         if user_input == '1':
-            user_pass = input('Please enter a password to encode: ')
+            user_pass = input('Please enter your password to encode: ')
             encoded = encode_pass(user_pass)
             print('Your password has been encoded and stored!')
         if user_input == '2':
-            print('The encoded password is ' + encoded + ' and the original password is ' + decode(user_pass))
+            print('The encoded password is, ' + encoded + ' and the original password is ' + decode(user_pass) + '.')
         if user_input == '3':
             break
 
