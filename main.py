@@ -4,9 +4,9 @@ def encode_pass(password):
     for i in pass_list:
         i = int(i)
         i += 3
-        en_pass.append(i)
-    pass_string = ''.join(en_pass)
-    return pass_string
+        en_pass.append(str(i))
+    en_pass = ''.join(en_pass)
+    return en_pass
 
 def decode(enc_password):
     list_encpassword = list(enc_password)
@@ -30,7 +30,6 @@ if __name__ == '__main__':
         user_input = input('Please enter an option: ')
         if user_input == '1':
             user_pass = input('Please enter a password to encode: ')
-            print(encode_pass(user_pass))
             print('Your password has been encoded and stored!')
         if user_input == '2':
             print('The encoded password is' + user_pass + 'and the original password is' + decode(user_pass))
