@@ -8,6 +8,12 @@ def encode_pass(password):
     pass_string = ''.join(en_pass)
     return pass_string
 
+def decode(enc_password):
+    list_encpassword = list(enc_password)
+    for i in range(0, len(enc_password)):
+        list_encpassword[i] = str(int(enc_password[i]) - 3)
+        i += 1
+    return "".join(list_encpassword)
 
 def menu():
     print('Menu\n' +
@@ -27,7 +33,7 @@ if __name__ == '__main__':
             print(encode_pass(user_pass))
             print('Your password has been encoded and stored!')
         if user_input == '2':
-            print('The encoded password is' + user_pass + 'and the original password is')
+            print('The encoded password is' + user_pass + 'and the original password is' + decode(user_pass))
         if user_input == '3':
             break
 
