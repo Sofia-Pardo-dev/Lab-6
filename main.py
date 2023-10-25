@@ -32,7 +32,7 @@ if __name__ == '__main__':
             user_pass = input('Please enter a password to encode: ')
             print('Your password has been encoded and stored!')
         if user_input == '2':
-            print('The encoded password is' + user_pass + 'and the original password is' + decode(user_pass))
+            print('The encoded password is ' + user_pass + ' and the original password is ' + decode(user_pass))
         if user_input == '3':
             break
 
